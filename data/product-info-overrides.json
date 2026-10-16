@@ -1,0 +1,1 @@
+{"note":"Reviewed display exclusions. The TSV is not modified; listed fields are hidden in the app with a visible note because the source row itself flags them as wrong content.","hide":[{"productId":"hince-new-depth-eyeshadow","rows":[61,62],"fields":["benefits","howToUse"],"reason":"claimDisclaimers of rows 61–62: content of V006/V007 is mixed with a concealer description."}]}

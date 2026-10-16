@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 662" fill="none" role="img" aria-label="ActsOne">
+  <!--
+    Mark ActsOne, kích thước gốc 1000×662, KHÔNG kèm nền/plate.
+
+    Hình học lấy nguyên từ `logo public/favicon.svg` — nguồn chính thức. Không vẽ lại,
+    không trace. Bốn petal dùng chung một shape gốc (vuông 310, góc vuông ở TRÊN-PHẢI)
+    rồi xoay quanh tâm.
+
+    LƯU Ý HÌNH HỌC — chỗ này rất dễ làm sai: mark KHÔNG đối xứng bốn hướng.
+      trên-trái   rotate(90)   → góc vuông xuống dưới-phải   (hướng vào tâm)
+      trên-phải   rotate(180)  → góc vuông xuống dưới-trái   (hướng vào tâm)
+      dưới-trái   rotate(270)  → góc vuông lên TRÊN-TRÁI     (hướng RA NGOÀI)
+      dưới-phải   rotate(270)  → góc vuông lên trên-trái     (hướng vào tâm)
+    rotate(270) xuất hiện HAI lần. Vẽ theo trực giác "cả bốn đều hướng vào tâm" sẽ ra sai
+    petal dưới-trái — đã kiểm chứng bằng IoU trên ảnh gốc: 0.9969 cho tl so với 0.8769 cho tr.
+
+    Transform giữ nguyên thay vì bake vào path để còn đối chiếu được với file gốc.
+  -->
+  <defs>
+    <path id="acts-petal"
+          d="M0 155 A155 155 0 0 1 155 0 H310 V155 A155 155 0 0 1 155 310 A155 155 0 0 1 0 155 Z"/>
+  </defs>
+
+  <use href="#acts-petal" fill="#B5D9F2" transform="translate(8,2)    rotate(90 155 155)"/>
+  <use href="#acts-petal" fill="#63C7FA" transform="translate(345,2)  rotate(180 155 155)"/>
+  <use href="#acts-petal" fill="#B5D9F2" transform="translate(8,352)  rotate(270 155 155)"/>
+  <use href="#acts-petal" fill="#63C7FA" transform="translate(345,352) rotate(270 155 155)"/>
+
+  <!-- Giọt nước: hai cạnh là đường Bézier, KHÔNG phải tiếp tuyến thẳng. -->
+  <path fill="#B5D9F2" d="M845 390 C 782 336 690 282 690 155 A 155 155 0 0 1 1000 155 C 1000 282 908 336 845 390 Z"/>
+
+  <circle cx="845" cy="530" r="118" fill="#F9EC00"/>
+</svg>
